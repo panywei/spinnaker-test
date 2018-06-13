@@ -1,2 +1,2 @@
 # spinnaker-test
-test build
+test build 2
