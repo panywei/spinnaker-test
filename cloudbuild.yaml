@@ -3,6 +3,6 @@ steps:
     args: ["install", "github.com/panywei/spinnaker-test"]
     env: ["PROJECT_ROOT=github.com/panywei/spinnaker-test"]
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-f", "Dockerfile", "."]
+    args: ["build", "-t", "gcr.io/csm-security-analytics/spinnaker-test:$REVISION_ID", "-t", "gcr.io/csm-security-analytics/spinnaker-test:latest", "-f", "Dockerfile", "."]
 images:
   - "gcr.io/csm-security-analytics/spinnaker-test:$REVISION_ID"
